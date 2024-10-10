@@ -10,6 +10,7 @@ SMTP_PORT = 465
 
 celery = Celery('tasks', broker='redis://localhost:6379')
 
+
 def get_email_template_dashboard(username: str):
     email = EmailMessage()
     email['Subject'] = 'Натрейдил Отчет Дашборд'
