@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Welcome to Натрейдил, your platform for trading.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block head %}
+    {% endblock %}
+    <title>Натрейдил</title>
+</head>
+<body>
+    <nav class="flex justify-between text-3xl my-3" role="navigation" aria-label="Main Navigation">
+        <ul class="flex ml-10">
+            <li>Натрейдил</li>
+        </ul>
+        <ul class="flex gap-5 mr-10">
+            <li><a href="#account">Мой аккаунт</a></li>
+            <li><a href="#logout">Выйти</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <div id="content" role="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
