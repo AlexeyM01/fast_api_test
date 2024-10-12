@@ -9,7 +9,7 @@ from auth.schemas import UserCreate, UserRead
 from operations.router import router as router_operation
 from tasks.router import router as router_tasks
 from pages.router import router as router_pages
-
+from chat.router import router as router_chat
 app = FastAPI(
     title="Trading App"
 )
@@ -29,6 +29,8 @@ app.include_router(
 app.include_router(router_operation)
 app.include_router(router_tasks)
 app.include_router(router_pages)
+app.include_router(router_chat)
+
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
